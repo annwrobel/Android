@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@+id/activity_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.offcasoftware.shop2.view.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:elevation="4dp"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:title="@string/app_name" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.offcasoftware.shop2.view.widget.ProductCardView
+            android:id="@+id/product_1"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="4dp" />
+
+        <com.offcasoftware.shop2.view.widget.ProductCardView
+            android:id="@+id/product_2"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="4dp" />
+
+        <com.offcasoftware.shop2.view.widget.ProductCardView
+            android:id="@+id/product_3"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="4dp" />
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/add_new_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_input_add"
+        app:layout_anchor="@id/line1"
+        app:layout_anchorGravity="end|bottom" />
+
+</android.support.design.widget.CoordinatorLayout>
